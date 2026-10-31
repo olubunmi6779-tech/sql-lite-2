@@ -50,5 +50,20 @@ conn.commit()
 print('Database ready!')
 
 
+tables= pd.read_sql("""SELECT * 
+   FROM sql_Master
+   WHERE type='table; """, conn)
+print(tables)
+
+matches= pd.read_sql("""SELECT * 
+FROM MATCH;""", conn)
+print(matches)
+print('Rows and columns:', matches.shape)
+
+
+
+
+
+
 
 
